@@ -1,16 +1,16 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom'; // 1. Import Outlet
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+// No longer need LayoutProps
+const Layout = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navigation />
-      <main>{children}</main>
+      <main className="flex-grow">
+        <Outlet /> {/* 2. Use Outlet instead of children */}
+      </main>
       <Footer />
     </div>
   );
