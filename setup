@@ -1,0 +1,64 @@
+
+1. Backend Dependencies
+Open a terminal, navigate into your backend folder, and run the following command to install all the necessary packages for the server:
+
+Bash
+
+cd path/to/your/project/backend
+npm install express mongoose cors dotenv bcryptjs jsonwebtoken multer
+express: The main framework for our server.
+
+mongoose: To connect to and interact with your MongoDB database.
+
+cors: To allow your frontend and backend to communicate with each other.
+
+dotenv: To manage your secret keys (like MONGO_URI and JWT_SECRET).
+
+bcryptjs: For securely hashing user passwords.
+
+jsonwebtoken: To create and manage login sessions for users and the admin.
+
+multer: For handling image file uploads from the admin panel.
+
+For development, it's also highly recommended to install nodemon, which automatically restarts your server when you make changes.
+
+Bash
+
+npm install -D nodemon 
+(The -D saves it as a development dependency).
+
+2. Frontend Dependencies
+Next, open a new terminal, navigate into your frontend folder, and run this command:
+
+Bash
+
+cd path/to/your/project/frontend
+npm install react-router-dom axios lucide-react
+react-router-dom: For handling all the page navigation (/, /login, /admin, etc.).
+
+axios: For making all the API calls from your React app to your backend server.
+
+lucide-react: For all the cool icons we used across the entire site.
+
+A Special Note on Tailwind CSS
+Your project's beautiful UI is built with Tailwind CSS. When you set up the project on a new device, you also need to install it. The command is usually included with the other dev dependencies:
+
+Bash
+
+npm install -D tailwindcss postcss autoprefixer
+After running this, make sure you have the necessary configuration files (tailwind.config.js and postcss.config.js) in your frontend root directory. If you are copying your project from a Git repository, these files should already be there.
+
+Final Checklist for the New Device
+To make it super simple, here's your final checklist:
+
+✅ Copy Project Files: Get your backend and frontend folders onto the new device.
+
+✅ Install Backend Packages: Open a terminal in the backend folder and run npm install.
+
+✅ Install Frontend Packages: Open another terminal in the frontend folder and run npm install.
+
+✅ Create Backend .env File: In the backend folder, create a .env file and add your MONGO_URI and JWT_SECRET.
+
+✅ Create Frontend .env File: In the frontend folder, create a .env file and add VITE_API_BASE_URL=http://localhost:5000.
+
+✅ Run the Project: Start your backend server (e.g., npm start) and your frontend server (npm run dev).
